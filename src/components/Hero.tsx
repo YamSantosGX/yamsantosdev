@@ -48,17 +48,10 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl mb-4 text-foreground font-semibold">
             Yam Gabriel <span className="gradient-text">Santos Antunes</span>
           </h1>
-          <p className="text-2xl md:text-3xl text-primary font-semibold mb-6 text-glow">
-            Desenvolvedor Web
-          </p>
+          <p className="text-2xl md:text-3xl text-primary font-semibold mb-6 text-glow">Desenvolvedor Full Stack | Designer</p>
 
           {/* Professional Summary */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-            Desenvolvedor web freelancer com experiência em projetos pessoais e de equipe. 
-            Especializado em React, Node.js e Python, busco oportunidades para crescimento profissional 
-            e desenvolvimento de soluções inovadoras. Apaixonado por criar experiências digitais 
-            impactantes e funcionais.
-          </p>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">Desenvolvedor Full-Stack e Analista de Dados | sempre em busca de oportunidades para crescimento profissional e desenvolvimento de soluções inovadoras. Apaixonado por criar experiências digitais impactantes e funcionais.</p>
 
           {/* Social Links */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
