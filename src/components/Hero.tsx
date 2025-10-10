@@ -37,13 +37,6 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fadeIn">
-          {/* Profile Image */}
-          <div className="mb-8 inline-block">
-            <div className="w-48 h-48 rounded-full border-4 border-primary mx-auto overflow-hidden shadow-lg border-glow animate-float">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Yam Gabriel Santos Antunes" className="w-full h-full object-cover" />
-            </div>
-          </div>
-
           {/* Name and Title */}
           <h1 className="text-5xl md:text-7xl mb-4 text-foreground font-semibold">
             Yam Gabriel <span className="gradient-text">Santos Antunes</span>
