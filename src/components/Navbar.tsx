@@ -54,7 +54,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="https://bio.site/yamsantos" target="_blank" rel="noopener noreferrer" className="gradient-text hover:scale-105 transition-transform text-xl font-bold text-slate-600 rounded-sm">Yam Santos</a>
+          <a href="https://bio.site/yamsantos" target="_blank" rel="noopener noreferrer" className="gradient-text hover:scale-105 transition-transform text-xl font-bold text-slate-600 rounded-sm">Future Conect</a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-2">
