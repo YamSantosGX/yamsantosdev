@@ -27,7 +27,7 @@ const Hero = () => {
       behavior: "smooth"
     });
   };
-  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Animated background effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card/30" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
@@ -38,7 +38,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fadeIn">
           {/* Name and Title */}
-          <h1 className="text-5xl md:text-7xl mb-4 text-foreground font-semibold">
+          <h1 className="text-5xl md:text-7xl mb-4 text-foreground font-semibold animate-bounce">
             Yam Gabriel <span className="gradient-text">Santos Antunes</span>
           </h1>
           <p className="text-2xl md:text-3xl text-primary font-semibold mb-6 text-glow">Desenvolvedor Full Stack | Designer</p>

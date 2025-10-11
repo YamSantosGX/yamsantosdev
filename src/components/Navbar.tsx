@@ -12,15 +12,28 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({
-      behavior: "smooth"
-    });
+    if (id === 'about' || id === 'companies') {
+      window.location.hash = id;
+    } else {
+      window.location.hash = '';
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({
+          behavior: "smooth"
+        });
+      }, 100);
+    }
     setIsMobileMenuOpen(false);
   };
   const navItems = [{
     label: "Início",
     id: "hero"
+  }, {
+    label: "Sobre mim",
+    id: "about"
+  }, {
+    label: "Empresas",
+    id: "companies"
   }, {
     label: "Experiência",
     id: "experience"
@@ -41,7 +54,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <button onClick={() => scrollToSection("hero")} className="gradient-text hover:scale-105 transition-transform text-xl font-bold text-slate-600 rounded-sm">Yam Santos</button>
+          <a href="https://bio.site/yamsantos" target="_blank" rel="noopener noreferrer" className="gradient-text hover:scale-105 transition-transform text-xl font-bold text-slate-600 rounded-sm">Yam Santos</a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-2">

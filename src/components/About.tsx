@@ -2,7 +2,7 @@ import profileImage from "@/assets/profile.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="py-20 px-4 min-h-screen flex items-center animate-slideUp">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
           Sobre Mim
@@ -12,11 +12,11 @@ const About = () => {
           {/* Profile Image */}
           <div className="flex justify-center md:justify-end animate-fadeIn">
             <div className="relative">
-              <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-2xl" />
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl" />
               <img 
                 src={profileImage} 
                 alt="Yam Gabriel Santos Antunes" 
-                className="relative w-full max-w-md rounded-2xl shadow-2xl border-2 border-primary/30 hover:scale-105 transition-transform duration-300"
+                className="relative w-64 h-64 rounded-full shadow-2xl border-2 border-primary/30 hover:scale-105 transition-transform duration-300 object-cover"
               />
             </div>
           </div>
