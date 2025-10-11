@@ -12,7 +12,7 @@ const Experience = () => {
         "Desenvolvi juntamente a outros bolsistas um protótipo de aplicativo para Android e um site",
         "Utilizamos o Canva e sites de abordagem para desenvolvimento",
         "Fui líder de equipe e orientei membros inexperientes da equipe a cumprir com o prazo do projeto",
-        "Coordenei equipe de 5 pessoas com entregas no prazo"
+        "Apoiei minha equipe de 10 pessoas para melhor desenvolvimento de skills de cada"
       ]
     },
     {
