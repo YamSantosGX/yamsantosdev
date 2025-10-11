@@ -19,7 +19,7 @@ const Contact = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch("https://yamsantosdev.app.n8n.cloud/webhook-test/portifólio", {
+      const response = await fetch("https://yamsantosdev.app.n8n.cloud/webhook/portifólio", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
