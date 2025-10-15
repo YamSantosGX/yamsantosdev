@@ -20,9 +20,9 @@ const Education = () => {
   ];
 
   const languages = [
-    { name: "Português", level: "Nativo", percentage: 100 },
-    { name: "Inglês", level: "Intermediário", percentage: 70 },
-    { name: "Espanhol", level: "Intermediário", percentage: 65 }
+    { name: "Português", level: "Nativo", percentage: 98 },
+    { name: "Inglês", level: "Intermediário", percentage: 50 },
+    { name: "Espanhol", level: "Intermediário", percentage: 70 }
   ];
 
   return (

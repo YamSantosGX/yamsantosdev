@@ -7,11 +7,11 @@ const Skills = () => {
       title: "Linguagens de Programação",
       icon: Code,
       skills: [
-        { name: "Python", level: 85 },
-        { name: "React", level: 90 },
+        { name: "Python", level: 65 },
+        { name: "React", level: 60 },
         { name: "Node.js", level: 80 },
         { name: "JavaScript", level: 90 },
-        { name: "HTML & CSS", level: 95 },
+        { name: "HTML & CSS", level: 80 },
       ]
     },
     {
@@ -38,7 +38,7 @@ const Skills = () => {
       skills: [
         { name: "UI/UX Design", level: 85 },
         { name: "Canva", level: 90 },
-        { name: "Design Responsivo", level: 90 },
+        { name: "Design Responsivo", level: 80 },
       ]
     },
     {

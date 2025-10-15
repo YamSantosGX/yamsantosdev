@@ -5,6 +5,18 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "Gestão de Clínica Estética",
+      description: "Sistema completo de gestão para clínicas estéticas com dashboard interativo",
+      url: "https://gestao-de-clinica-estetica.base44.app/Dashboard",
+      tags: ["React", "Dashboard", "Gestão"]
+    },
+    {
+      title: "Meus Designs",
+      description: "Portfólio de designs e projetos visuais criados",
+      url: "https://drive.google.com/drive/u/1/folders/1ylYGd0BXnShOwyHXJIa2M-oEZwXKlV8E",
+      tags: ["UI/UX", "Design", "Portfólio"]
+    },
+    {
       title: "Starbucks Base",
       description: "Clone da interface do Starbucks com design moderno e responsivo",
       url: "https://starbucks-base-smoky.vercel.app",
