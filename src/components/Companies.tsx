@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import cciasLogo from "@/assets/logo_ccia.jpg";
-import conexcoreLogo from "@/assets/conexcore_cover.jpeg";
+import securexLogo from "@/assets/securex_logo.png";
 
 const Companies = () => {
   const companies = [
@@ -9,12 +10,15 @@ const Companies = () => {
       fullName: "Centro de Compra Interativo e Assistencial",
       description: "Empresa de compras digitais e interação ao público do Discord em que ajudo a gerenciar",
       logo: cciasLogo,
+      discordLink: "https://discord.gg/SzmttvfDmw",
     },
     {
-      name: "ConexCore",
-      fullName: "Conectando ao Futuro Digital",
-      description: "Empresa de desenvolvedores e design em ascensão do qual sou sócio",
-      logo: conexcoreLogo,
+      name: "SecureX Cybersecurity",
+      fullName: "Segurança de Classe Mundial",
+      description: "Plataforma profissional de cybersegurança para análise e proteção de aplicações web.",
+      logo: securexLogo,
+      website: "https://secure-x.online/",
+      discordLink: "https://discord.gg/X36RjdnReJ",
     },
   ];
 
@@ -46,6 +50,27 @@ const Companies = () => {
                     <p className="text-lg font-semibold text-foreground">{company.fullName}</p>
                     <p className="text-muted-foreground">{company.description}</p>
                   </div>
+                  {company.website && (
+                    <Button
+                      asChild
+                      className="w-full"
+                    >
+                      <a href={company.website} target="_blank" rel="noopener noreferrer">
+                        Visitar Website
+                      </a>
+                    </Button>
+                  )}
+                  {company.discordLink && (
+                    <Button
+                      asChild
+                      variant="secondary"
+                      className="w-full"
+                    >
+                      <a href={company.discordLink} target="_blank" rel="noopener noreferrer">
+                        Junte-se ao nosso servidor
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
