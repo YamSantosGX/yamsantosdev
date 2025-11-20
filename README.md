@@ -1,4 +1,4 @@
-# Bem-vindo ao meu projeto Lovable
+# Bem-vindo ao meu projeto de portifólio
 
 ## Informações do projeto
 
