@@ -44,7 +44,7 @@ const Hero = () => {
           <p className="text-2xl md:text-3xl text-primary font-semibold mb-6 text-glow">Desenvolvedor Full Stack | Designer</p>
 
           {/* Professional Summary */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">Desenvolvedor Full-Stack e Analista de Dados | sempre em busca de oportunidades para crescimento profissional e desenvolvimento de soluções inovadoras. Apaixonado por criar experiências digitais impactantes e funcionais.</p>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed text-muted-foreground">Desenvolvedor Full-Stack e Analista de Dados | sempre em busca de oportunidades para crescimento profissional e desenvolvimento de soluções inovadoras. Apaixonado por resolver problemas e conhecer mais tecnologias.</p>
 
           {/* Social Links */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
