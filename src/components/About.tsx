@@ -10,7 +10,7 @@ const About = () => {
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
-          <div className="flex justify-center md:justify-end md:-ml-8 animate-fadeIn">
+          <div className="flex justify-center md:justify-start md:-ml-[20%] animate-fadeIn">
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl" />
               <img 
@@ -49,6 +49,9 @@ const About = () => {
               </span>
               <span className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-primary text-sm font-medium">
                 Criatividade
+              </span>
+              <span className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-primary text-sm font-medium">
+                Liderança
               </span>
             </div>
           </div>

@@ -1,12 +1,28 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Detect active section
+      const sections = ["hero", "about", "companies", "experience", "education", "skills", "career-timeline", "contact"];
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -57,10 +73,24 @@ const Navbar = () => {
           <a href="https://bio.site/yamsantos" target="_blank" rel="noopener noreferrer" className="gradient-text hover:scale-105 transition-transform text-xl font-bold text-slate-600 rounded-sm">Future Conect</a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2">
-            {navItems.map(item => <Button key={item.id} variant="ghost" onClick={() => scrollToSection(item.id)} className="text-foreground hover:text-primary hover:bg-primary/10 transition-all">
+          <div className="hidden md:flex items-center gap-1">
+            {navItems.map(item => (
+              <Button 
+                key={item.id} 
+                variant="ghost" 
+                onClick={() => scrollToSection(item.id)} 
+                className={`relative text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 ${
+                  activeSection === item.id ? "text-primary" : ""
+                }`}
+              >
                 {item.label}
-              </Button>)}
+                <span 
+                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-primary transition-all duration-300 ${
+                    activeSection === item.id ? "w-3/4 opacity-100" : "w-0 opacity-0"
+                  }`}
+                />
+              </Button>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}
