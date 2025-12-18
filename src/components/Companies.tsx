@@ -56,7 +56,7 @@ const Companies = () => {
                       className="w-full"
                     >
                       <a href={company.website} target="_blank" rel="noopener noreferrer">
-                        Visitar Website
+                        Visitar Plataforma
                       </a>
                     </Button>
                   )}

@@ -11,6 +11,7 @@ import Contact from "@/components/Contact";
 import ResumeDownload from "@/components/ResumeDownload";
 import CareerTimeline from "@/components/CareerTimeline";
 import Footer from "@/components/Footer";
+import ScrollSection from "@/components/ScrollSection";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -62,13 +63,27 @@ const Index = () => {
         <div id="hero">
           <Hero />
         </div>
-        <Experience />
-        <Projects />
-        <Education />
-        <Skills />
-        <CareerTimeline />
-        <Contact />
-        <ResumeDownload />
+        <ScrollSection>
+          <Experience />
+        </ScrollSection>
+        <ScrollSection>
+          <Projects />
+        </ScrollSection>
+        <ScrollSection>
+          <Education />
+        </ScrollSection>
+        <ScrollSection>
+          <Skills />
+        </ScrollSection>
+        <ScrollSection>
+          <CareerTimeline />
+        </ScrollSection>
+        <ScrollSection>
+          <Contact />
+        </ScrollSection>
+        <ScrollSection>
+          <ResumeDownload />
+        </ScrollSection>
       </main>
       <Footer />
     </div>
