@@ -48,18 +48,26 @@ const Hero = () => {
 
           {/* Social Links */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {socialLinks.map(social => <Button key={social.label} variant="outline" size="lg" className="border-primary/50 hover:border-primary hover:bg-primary/10 transition-all duration-300" onClick={() => window.open(social.url, "_blank")}>
+            {socialLinks.map(social => (
+              <Button 
+                key={social.label} 
+                variant="outline" 
+                size="lg" 
+                className="border-primary/50 hover:border-primary hover:bg-primary/10 hover:scale-105 hover:text-primary transition-all duration-300" 
+                onClick={() => window.open(social.url, "_blank")}
+              >
                 <social.icon className="mr-2 h-5 w-5" />
                 {social.label}
-              </Button>)}
+              </Button>
+            ))}
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg border-glow" onClick={() => scrollToSection("contact")}>
+            <Button size="lg" className="bg-primary hover:bg-primary/90 hover:scale-105 text-primary-foreground shadow-lg border-glow transition-all duration-300" onClick={() => scrollToSection("contact")}>
               Entre em Contato
             </Button>
-            <Button size="lg" variant="outline" className="border-primary/50 hover:border-primary hover:bg-primary/10" onClick={() => scrollToSection("resume-download")}>
+            <Button size="lg" variant="outline" className="border-primary/50 hover:border-primary hover:bg-primary/10 hover:scale-105 transition-all duration-300" onClick={() => scrollToSection("resume-download")}>
               <Download className="mr-2 h-5 w-5" />
               Baixar Currículo
             </Button>
