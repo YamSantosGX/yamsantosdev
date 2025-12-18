@@ -54,7 +54,7 @@ const ResumeDownload = () => {
             {downloadOptions.map((option, index) => (
               <Card
                 key={index}
-                className="border-primary/30 hover:border-primary/60 transition-all duration-300 bg-card/50 backdrop-blur text-center group animate-fadeIn"
+                className="border-primary/30 hover:border-[#00BFFF]/60 hover:scale-105 transition-all duration-300 bg-card/50 backdrop-blur text-center group animate-fadeIn"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
@@ -71,7 +71,7 @@ const ResumeDownload = () => {
                 <CardContent>
                   <Button
                     onClick={() => handleDownload(option.format)}
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                    className="w-full bg-primary hover:bg-[#00BFFF] hover:text-white transition-all duration-300"
                   >
                     <Download className="mr-2 h-4 w-4" />
                     Baixar {option.format}
