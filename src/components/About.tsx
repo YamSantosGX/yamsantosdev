@@ -10,7 +10,7 @@ const About = () => {
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
-          <div className="flex justify-center md:justify-start md:-ml-[20%] animate-fadeIn">
+          <div className="flex justify-center md:justify-start md:-ml-[7%] animate-fadeIn">
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl" />
               <img 

@@ -58,7 +58,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl hover:border-primary/50 transition-all duration-300 bg-card/50 backdrop-blur"
+              className="group hover:shadow-xl hover:border-primary/50 hover:scale-105 transition-all duration-300 bg-card/50 backdrop-blur"
             >
               <CardHeader>
                 <CardTitle className="text-2xl group-hover:text-primary transition-colors">
@@ -81,7 +81,7 @@ const Projects = () => {
                 </div>
                 <Button 
                   variant="outline" 
-                  className="w-full border-primary/50 hover:border-primary hover:bg-primary/10"
+                  className="w-full border-primary/50 hover:border-[#00BFFF] hover:bg-[#00BFFF]/10 hover:text-[#00BFFF] transition-all duration-300"
                   onClick={() => window.open(project.url, "_blank")}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
@@ -96,7 +96,7 @@ const Projects = () => {
           <Button 
             size="lg"
             variant="outline"
-            className="border-primary/50 hover:border-primary hover:bg-primary/10"
+            className="border-primary/50 hover:border-[#00BFFF] hover:bg-[#00BFFF]/10 hover:text-[#00BFFF] hover:scale-105 transition-all duration-300"
             onClick={() => window.open("https://github.com/YamSantosGX", "_blank")}
           >
             <Github className="mr-2 h-5 w-5" />
