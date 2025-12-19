@@ -33,27 +33,29 @@ const Companies = () => {
           {companies.map((company, index) => (
             <Card 
               key={company.name}
-              className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105 animate-fadeIn"
+              className="group bg-card/50 backdrop-blur-sm border-primary/20 hover:border-[#00BFFF] transition-all duration-500 ease-out hover:scale-105 animate-fadeIn relative overflow-hidden hover:shadow-[0_0_30px_rgba(0,191,255,0.3)]"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <CardContent className="p-6">
+              {/* Glow effect overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00BFFF]/0 via-[#00BFFF]/0 to-[#00BFFF]/0 group-hover:from-[#00BFFF]/5 group-hover:via-[#00BFFF]/10 group-hover:to-[#00BFFF]/5 transition-all duration-500 pointer-events-none" />
+              <CardContent className="p-6 relative z-10">
                 <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="w-full h-48 flex items-center justify-center overflow-hidden rounded-lg bg-background/50">
+                  <div className="w-full h-48 flex items-center justify-center overflow-hidden rounded-lg bg-background/50 group-hover:bg-background/70 transition-all duration-500">
                     <img
                       src={company.logo}
                       alt={`${company.name} logo`}
-                      className="max-w-full max-h-full object-contain"
+                      className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-2xl font-bold text-primary">{company.name}</h3>
+                    <h3 className="text-2xl font-bold text-primary group-hover:text-[#00BFFF] transition-colors duration-300">{company.name}</h3>
                     <p className="text-lg font-semibold text-foreground">{company.fullName}</p>
                     <p className="text-muted-foreground">{company.description}</p>
                   </div>
                   {company.website && (
                     <Button
                       asChild
-                      className="w-full"
+                      className="w-full hover:bg-[#00BFFF] hover:text-white transition-all duration-300"
                     >
                       <a href={company.website} target="_blank" rel="noopener noreferrer">
                         Visitar Plataforma
@@ -64,7 +66,7 @@ const Companies = () => {
                     <Button
                       asChild
                       variant="secondary"
-                      className="w-full"
+                      className="w-full hover:bg-[#00BFFF]/20 hover:text-[#00BFFF] hover:border-[#00BFFF] transition-all duration-300"
                     >
                       <a href={company.discordLink} target="_blank" rel="noopener noreferrer">
                         Junte-se ao nosso servidor

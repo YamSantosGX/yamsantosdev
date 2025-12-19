@@ -67,7 +67,7 @@ const Hero = () => {
             <Button size="lg" className="bg-primary hover:bg-primary/90 hover:scale-105 text-primary-foreground shadow-lg border-glow transition-all duration-300" onClick={() => scrollToSection("contact")}>
               Entre em Contato
             </Button>
-            <Button size="lg" variant="outline" className="border-primary/50 hover:border-primary hover:bg-primary/10 hover:scale-105 transition-all duration-300" onClick={() => scrollToSection("resume-download")}>
+            <Button size="lg" variant="outline" className="border-primary/50 hover:border-[#00BFFF] hover:bg-[#00BFFF]/10 hover:text-[#00BFFF] hover:scale-105 transition-all duration-300" onClick={() => scrollToSection("resume-download")}>
               <Download className="mr-2 h-5 w-5" />
               Baixar Currículo
             </Button>
