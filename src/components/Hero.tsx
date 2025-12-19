@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Instagram, Youtube, MessageSquare, Download, ArrowDown } from "lucide-react";
+import TypingEffect from "./TypingEffect";
+
 const Hero = () => {
   const socialLinks = [{
     icon: Linkedin,
@@ -22,6 +24,9 @@ const Hero = () => {
     url: "https://github.com/YamSantosGX",
     label: "GitHub"
   }];
+
+  const typingWords = ["Full Stack", "Python", "Web", "Designer", "de Bots", "de Servidores"];
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth"
@@ -41,7 +46,9 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl mb-4 text-foreground font-semibold animate-bounce">
             Yam Gabriel <span className="gradient-text">Santos Antunes</span>
           </h1>
-          <p className="text-2xl md:text-3xl text-primary font-semibold mb-6 text-glow">Desenvolvedor Full Stack | Designer</p>
+          <div className="mb-6">
+            <TypingEffect prefix="Desenvolvedor" words={typingWords} />
+          </div>
 
           {/* Professional Summary */}
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed text-muted-foreground">Desenvolvedor Full-Stack e Analista de Dados | sempre em busca de oportunidades para crescimento profissional e desenvolvimento de soluções inovadoras. Apaixonado por resolver problemas e conhecer mais tecnologias.</p>
