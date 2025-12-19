@@ -1,59 +1,8 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    try {
-      const response = await fetch("https://yamsantosdev.app.n8n.cloud/webhook/portifólio", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Mensagem enviada!",
-          description: "Obrigado pelo contato. Retornarei em breve!",
-        });
-        
-        // Reset form
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        throw new Error("Falha ao enviar mensagem");
-      }
-    } catch (error) {
-      toast({
-        title: "Erro ao enviar mensagem",
-        description: "Por favor, tente novamente mais tarde.",
-        variant: "destructive",
-      });
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   const contactInfo = [
     {
       icon: Phone,
@@ -78,7 +27,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16 animate-fadeIn">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
               Entre em <span className="gradient-text">Contato</span>
@@ -88,115 +37,63 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-6">
             {/* Contact Information */}
-            <div className="space-y-6">
-              <Card className="border-primary/30 bg-card/50 backdrop-blur">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-foreground">Informações de Contato</CardTitle>
-                  <CardDescription>
-                    Entre em contato para discutir projetos ou oportunidades
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {contactInfo.map((info, index) => (
-                    <a
-                      key={index}
-                      href={info.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-start gap-4 p-4 rounded-lg border border-primary/20 hover:border-primary/60 transition-all duration-300 group"
-                    >
-                      <div className="p-3 bg-primary/10 rounded-lg border-glow group-hover:scale-110 transition-transform">
-                        <info.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">{info.label}</p>
-                        <p className="text-foreground font-medium">{info.value}</p>
-                      </div>
-                    </a>
-                  ))}
-                </CardContent>
-              </Card>
-
-              {/* Additional Info */}
-              <Card className="border-primary/30 bg-card/50 backdrop-blur">
-                <CardHeader>
-                  <CardTitle className="text-xl text-foreground">Disponibilidade</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-foreground/80 mb-4">
-                    Atualmente disponível para projetos freelance e oportunidades de trabalho fixo.
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
-                    <span className="text-sm text-primary font-semibold">Disponível para novos projetos</span>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Contact Form */}
             <Card className="border-primary/30 bg-card/50 backdrop-blur">
               <CardHeader>
-                <CardTitle className="text-2xl text-foreground">Envie uma Mensagem</CardTitle>
+                <CardTitle className="text-2xl text-foreground">Informações de Contato</CardTitle>
                 <CardDescription>
-                  Preencha o formulário e retornarei o mais breve possível
+                  Entre em contato para discutir projetos ou oportunidades
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {contactInfo.map((info, index) => (
+                  <a
+                    key={index}
+                    href={info.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-4 p-4 rounded-lg border border-primary/20 hover:border-[#00BFFF] hover:shadow-[0_0_15px_rgba(0,191,255,0.2)] transition-all duration-300 group"
+                  >
+                    <div className="p-3 bg-primary/10 rounded-lg border-glow group-hover:scale-110 group-hover:bg-[#00BFFF]/20 transition-all duration-300">
+                      <info.icon className="h-6 w-6 text-primary group-hover:text-[#00BFFF] transition-colors duration-300" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">{info.label}</p>
+                      <p className="text-foreground font-medium">{info.value}</p>
+                    </div>
+                  </a>
+                ))}
+              </CardContent>
+            </Card>
+
+            {/* WhatsApp CTA */}
+            <Card className="border-primary/30 bg-card/50 backdrop-blur">
+              <CardHeader>
+                <CardTitle className="text-xl text-foreground">Fale Comigo Diretamente</CardTitle>
+                <CardDescription>
+                  Clique no botão abaixo para iniciar uma conversa no WhatsApp
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Input
-                      name="name"
-                      placeholder="Seu Nome"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="bg-secondary/50 border-primary/30 focus:border-primary"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      name="email"
-                      type="email"
-                      placeholder="Seu Email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="bg-secondary/50 border-primary/30 focus:border-primary"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      name="subject"
-                      placeholder="Assunto"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="bg-secondary/50 border-primary/30 focus:border-primary"
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      name="message"
-                      placeholder="Sua Mensagem"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={6}
-                      className="bg-secondary/50 border-primary/30 focus:border-primary resize-none"
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground border-glow"
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(37,211,102,0.4)]"
+                >
+                  <a 
+                    href="https://wa.me/message/ZLR7P45MJDUFB1" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
                   >
-                    <Send className="mr-2 h-5 w-5" />
-                    Enviar Mensagem
-                  </Button>
-                </form>
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Conversar no WhatsApp
+                  </a>
+                </Button>
+                <div className="flex items-center justify-center gap-2 mt-4">
+                  <div className="w-3 h-3 bg-[#25D366] rounded-full animate-pulse" />
+                  <span className="text-sm text-muted-foreground">Disponível para novos projetos</span>
+                </div>
               </CardContent>
             </Card>
           </div>

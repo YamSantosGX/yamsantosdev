@@ -9,7 +9,6 @@ import Education from "@/components/Education";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import ResumeDownload from "@/components/ResumeDownload";
-import CareerTimeline from "@/components/CareerTimeline";
 import Footer from "@/components/Footer";
 import ScrollSection from "@/components/ScrollSection";
 
@@ -74,9 +73,6 @@ const Index = () => {
         </ScrollSection>
         <ScrollSection>
           <Skills />
-        </ScrollSection>
-        <ScrollSection>
-          <CareerTimeline />
         </ScrollSection>
         <ScrollSection>
           <Contact />
