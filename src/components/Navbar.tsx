@@ -60,9 +60,6 @@ const Navbar = () => {
     label: "Habilidades",
     id: "skills"
   }, {
-    label: "Objetivos",
-    id: "career-timeline"
-  }, {
     label: "Contato",
     id: "contact"
   }];
