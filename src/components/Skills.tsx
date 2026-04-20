@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-import { Code, Database, Wrench, Brain, Server, Palette } from "lucide-react";
+import { Code, Database, Wrench, Brain, Server, Palette, Pencil, Terminal, Bot } from "lucide-react";
 import {
   SiPython,
   SiReact,
@@ -13,8 +13,15 @@ import {
   SiGithub,
   SiCanva,
   SiOpenai,
+  SiPostgresql,
+  SiDocker,
+  SiSupabase,
+  SiFigma,
+  SiLinux,
+  SiNpm,
+  SiClaude,
 } from "react-icons/si";
-import { FaDatabase, FaFileExcel, FaChartBar, FaRobot, FaMagic, FaMobileAlt, FaCode, FaAws } from "react-icons/fa";
+import { FaDatabase, FaFileExcel, FaChartBar, FaRobot, FaMagic, FaMobileAlt, FaCode, FaAws, FaWindows } from "react-icons/fa";
 
 const Skills = () => {
   const skillCategories = [
@@ -36,6 +43,9 @@ const Skills = () => {
       skills: [
         { name: "SQL", Icon: FaDatabase, color: "#00BFFF" },
         { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
+        { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
+        { name: "Supabase", Icon: SiSupabase, color: "#3ECF8E" },
+        { name: "Docker", Icon: SiDocker, color: "#2496ED" },
         { name: "AWS", Icon: FaAws, color: "#FF9900" },
       ],
     },
@@ -45,6 +55,10 @@ const Skills = () => {
       skills: [
         { name: "Git", Icon: SiGit, color: "#F05032" },
         { name: "GitHub", Icon: SiGithub, color: "#ffffff" },
+        { name: "NPM", Icon: SiNpm, color: "#CB3837" },
+        { name: "Bun", Icon: Terminal, color: "#FBF0DF" },
+        { name: "WSL", Icon: SiLinux, color: "#FCC624" },
+        { name: "Windows", Icon: FaWindows, color: "#0078D6" },
         { name: "Power BI", Icon: FaChartBar, color: "#F2C811" },
         { name: "Pacote Office", Icon: FaFileExcel, color: "#217346" },
       ],
@@ -54,7 +68,9 @@ const Skills = () => {
       icon: Palette,
       skills: [
         { name: "UI/UX Design", Icon: FaMagic, color: "#FF61F6" },
+        { name: "Figma", Icon: SiFigma, color: "#F24E1E" },
         { name: "Canva", Icon: SiCanva, color: "#00C4CC" },
+        { name: "Pencil", Icon: Pencil, color: "#FFD700" },
         { name: "Design Responsivo", Icon: FaMobileAlt, color: "#00BFFF" },
       ],
     },
@@ -72,6 +88,8 @@ const Skills = () => {
       icon: Brain,
       skills: [
         { name: "IA Generativa", Icon: SiOpenai, color: "#10A37F" },
+        { name: "Claude Code", Icon: SiClaude, color: "#D97757" },
+        { name: "OpenCode", Icon: Bot, color: "#00BFFF" },
         { name: "Prompt Engineering", Icon: Brain, color: "#A855F7" },
         { name: "Automação", Icon: FaRobot, color: "#00BFFF" },
       ],
