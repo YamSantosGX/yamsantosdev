@@ -8,13 +8,12 @@ import {
   SiHtml5,
   SiCss,
   SiMongodb,
-  SiAmazonwebservices,
   SiGit,
   SiGithub,
   SiCanva,
   SiOpenai,
 } from "react-icons/si";
-import { FaDatabase, FaFileExcel, FaChartBar, FaRobot, FaMagic, FaMobileAlt, FaCode } from "react-icons/fa";
+import { FaDatabase, FaFileExcel, FaChartBar, FaRobot, FaMagic, FaMobileAlt, FaCode, FaAws } from "react-icons/fa";
 
 const Skills = () => {
   const skillCategories = [
@@ -27,7 +26,7 @@ const Skills = () => {
         { name: "Node.js", Icon: SiNodedotjs, color: "#339933" },
         { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
         { name: "HTML", Icon: SiHtml5, color: "#E34F26" },
-        { name: "CSS", Icon: SiCss3, color: "#1572B6" },
+        { name: "CSS", Icon: SiCss, color: "#1572B6" },
       ],
     },
     {
@@ -36,7 +35,7 @@ const Skills = () => {
       skills: [
         { name: "SQL", Icon: FaDatabase, color: "#00BFFF" },
         { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
-        { name: "AWS", Icon: SiAmazon, color: "#FF9900" },
+        { name: "AWS", Icon: FaAws, color: "#FF9900" },
       ],
     },
     {
