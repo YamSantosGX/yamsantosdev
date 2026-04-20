@@ -7,24 +7,24 @@ const Experience = () => {
       title: "Analista de Dados - Bolsista",
       company: "FACEPE",
       period: "Out/24 - Jan 25",
-      description: "Desenvolvimento de aplicativos e sites para projetos de pesquisa",
+      description: "Desenvolvimento de protótipo e design de aplicativo para empresa de serviços gerais e obras.",
       achievements: [
-        "Desenvolvi juntamente a outros bolsistas um protótipo de aplicativo para Android e um site",
-        "Utilizamos o Canva e sites de abordagem para desenvolvimento",
+        "Desenvolvi juntamente a outros bolsistas um protótipo de aplicativo para Android",
+        "Coleta de Dados em plataforma online; utilização Canva",
         "Fui líder de equipe e orientei membros inexperientes da equipe a cumprir com o prazo do projeto",
-        "Apoiei minha equipe de 10 pessoas para melhor desenvolvimento de skills de cada"
+        "Apoiei minha equipe com um total de 10 membros para melhor desenvolvimento de skills de cada"
       ]
     },
     {
-      title: "Designer UI",
+      title: "Designer UI/UX",
       company: "Freelance",
       period: "2023 - Presente",
       description: "Criação de interfaces e design gráfico",
       achievements: [
-        "Desenvolvi inúmeros projetos de design gráfico e web",
+        "Desenvolvimento de projetos de design gráfico e web",
         "Criação de identidades visuais completas para clientes",
         "Design responsivo e focado em experiência do usuário",
-        "Portfolio diversificado com projetos em diversos segmentos"
+        "Diversificação dos projetos em diversos segmentos"
       ]
     },
     {
@@ -33,9 +33,9 @@ const Experience = () => {
       period: "2024 - Presente",
       description: "Desenvolvimento de soluções web personalizadas",
       achievements: [
-        "Website Creation - Desenvolvimento de sites institucionais e landing pages",
+        "Website Creation - Desenvolvimento de sites e landing pages",
         "Dashboard - Power BI - Criação de dashboards interativos para análise de dados",
-        "Discord Bots with Python - Automação e bots personalizados para servidores",
+        "Discord Bots with Python, JavaScript and TypeScript - Automação e bots personalizados para servidores",
         "Integração com APIs e serviços externos"
       ]
     }
