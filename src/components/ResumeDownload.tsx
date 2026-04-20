@@ -81,36 +81,6 @@ const ResumeDownload = () => {
             ))}
           </div>
 
-          {/* Quick View Card */}
-          <Card className="border-primary/30 bg-card/50 backdrop-blur">
-            <CardHeader>
-              <CardTitle className="text-2xl text-foreground text-center">Visualização Rápida</CardTitle>
-              <CardDescription className="text-center">
-                Principais destaques do currículo
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-primary text-lg">Experiência</h4>
-                  <ul className="space-y-2 text-foreground/80">
-                    <li>• Analista de Dados - FACEPE</li>
-                    <li>• Designer UI - Freelance</li>
-                    <li>• Desenvolvedor Freelance</li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-primary text-lg">Principais Habilidades</h4>
-                  <ul className="space-y-2 text-foreground/80">
-                    <li>• Python, React, Node.js</li>
-                    <li>• UI/UX Design</li>
-                    <li>• Banco de Dados (SQL, MongoDB)</li>
-                    <li>• Inteligência Artificial</li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

@@ -1,5 +1,19 @@
-import { Code, Database, Wrench, Brain, Server, Palette } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Code, Database, Wrench, Brain, Server, Palette } from "lucide-react";
+import {
+  SiPython,
+  SiReact,
+  SiNodedotjs,
+  SiJavascript,
+  SiHtml5,
+  SiCss,
+  SiMongodb,
+  SiGit,
+  SiGithub,
+  SiCanva,
+  SiOpenai,
+} from "react-icons/si";
+import { FaDatabase, FaFileExcel, FaChartBar, FaRobot, FaMagic, FaMobileAlt, FaCode, FaAws } from "react-icons/fa";
 
 const Skills = () => {
   const skillCategories = [
@@ -7,58 +21,71 @@ const Skills = () => {
       title: "Linguagens de Programação",
       icon: Code,
       skills: [
-        { name: "Python", level: 65 },
-        { name: "React", level: 60 },
-        { name: "Node.js", level: 80 },
-        { name: "JavaScript", level: 90 },
-        { name: "HTML & CSS", level: 80 },
-      ]
+        { name: "Python", Icon: SiPython, color: "#3776AB" },
+        { name: "React", Icon: SiReact, color: "#61DAFB" },
+        { name: "Node.js", Icon: SiNodedotjs, color: "#339933" },
+        { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
+        { name: "HTML", Icon: SiHtml5, color: "#E34F26" },
+        { name: "CSS", Icon: SiCss, color: "#1572B6" },
+      ],
     },
     {
       title: "Banco de Dados",
       icon: Database,
       skills: [
-        { name: "SQL", level: 75 },
-        { name: "MongoDB", level: 70 },
-        { name: "AWS", level: 65 },
-      ]
+        { name: "SQL", Icon: FaDatabase, color: "#00BFFF" },
+        { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
+        { name: "AWS", Icon: FaAws, color: "#FF9900" },
+      ],
     },
     {
       title: "Ferramentas & Tecnologias",
       icon: Wrench,
       skills: [
-        { name: "Git/GitHub", level: 85 },
-        { name: "Power BI", level: 75 },
-        { name: "Pacote Office", level: 80 },
-      ]
+        { name: "Git", Icon: SiGit, color: "#F05032" },
+        { name: "GitHub", Icon: SiGithub, color: "#ffffff" },
+        { name: "Power BI", Icon: FaChartBar, color: "#F2C811" },
+        { name: "Pacote Office", Icon: FaFileExcel, color: "#217346" },
+      ],
     },
     {
       title: "Design",
       icon: Palette,
       skills: [
-        { name: "UI/UX Design", level: 85 },
-        { name: "Canva", level: 90 },
-        { name: "Design Responsivo", level: 80 },
-      ]
+        { name: "UI/UX Design", Icon: FaMagic, color: "#FF61F6" },
+        { name: "Canva", Icon: SiCanva, color: "#00C4CC" },
+        { name: "Design Responsivo", Icon: FaMobileAlt, color: "#00BFFF" },
+      ],
     },
     {
       title: "Competências Técnicas",
       icon: Server,
       skills: [
-        { name: "Desenvolvimento Web", level: 90 },
-        { name: "Bancos de Dados", level: 75 },
-        { name: "Controle de Versão", level: 85 },
-      ]
+        { name: "Desenvolvimento Web", Icon: FaCode, color: "#00BFFF" },
+        { name: "Bancos de Dados", Icon: FaDatabase, color: "#4DB33D" },
+        { name: "Controle de Versão", Icon: SiGit, color: "#F05032" },
+      ],
     },
     {
       title: "Inteligência Artificial",
       icon: Brain,
       skills: [
-        { name: "IA Generativa", level: 80 },
-        { name: "Prompt Engineering", level: 85 },
-        { name: "Automação", level: 75 },
-      ]
-    }
+        { name: "IA Generativa", Icon: SiOpenai, color: "#10A37F" },
+        { name: "Prompt Engineering", Icon: Brain, color: "#A855F7" },
+        { name: "Automação", Icon: FaRobot, color: "#00BFFF" },
+      ],
+    },
+  ];
+
+  const softSkills = [
+    "Liderança de Equipe",
+    "Trabalho em Equipe",
+    "Resolução de Problemas",
+    "Comunicação Efetiva",
+    "Gestão de Tempo",
+    "Adaptabilidade",
+    "Pensamento Crítico",
+    "Aprendizado Contínuo",
   ];
 
   return (
@@ -78,7 +105,7 @@ const Skills = () => {
             {skillCategories.map((category, index) => (
               <Card
                 key={index}
-                className="border-primary/30 hover:border-primary/60 transition-all duration-300 bg-card/50 backdrop-blur animate-fadeIn"
+                className="border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 bg-card/50 backdrop-blur animate-fadeIn"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
@@ -90,24 +117,24 @@ const Skills = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
-                    {category.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex}>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-sm font-medium text-foreground/90">{skill.name}</span>
-                          <span className="text-xs text-primary font-semibold">{skill.level}%</span>
-                        </div>
-                        <div className="relative h-2 bg-secondary rounded-full overflow-hidden">
-                          <div
-                            className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary to-accent transition-all duration-1000 ease-out border-glow"
-                            style={{
-                              width: `${skill.level}%`,
-                              animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s`
-                            }}
+                  <div className="grid grid-cols-3 gap-4">
+                    {category.skills.map((skill, skillIndex) => {
+                      const SkillIcon = skill.Icon;
+                      return (
+                        <div
+                          key={skillIndex}
+                          className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-secondary/40 border border-primary/20 hover:border-primary/60 hover:scale-110 transition-all duration-300"
+                        >
+                          <SkillIcon
+                            className="h-8 w-8 transition-transform"
+                            style={{ color: skill.color }}
                           />
+                          <span className="text-xs text-center text-foreground/90 font-medium leading-tight">
+                            {skill.name}
+                          </span>
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </CardContent>
               </Card>
@@ -120,11 +147,10 @@ const Skills = () => {
               Habilidades <span className="gradient-text">Interpessoais</span>
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {["Liderança de Equipe", "Trabalho em Equipe", "Resolução de Problemas", "Comunicação Efetiva", 
-                "Gestão de Tempo", "Adaptabilidade", "Pensamento Crítico", "Aprendizado Contínuo"].map((skill, index) => (
+              {softSkills.map((skill, index) => (
                 <div
                   key={index}
-                  className="p-4 bg-card/50 border border-primary/30 rounded-lg text-center hover:border-primary/60 transition-all duration-300 animate-fadeIn backdrop-blur"
+                  className="p-4 bg-card/50 border border-primary/30 rounded-lg text-center hover:border-primary/60 hover:scale-105 transition-all duration-300 animate-fadeIn backdrop-blur"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <p className="text-sm font-medium text-foreground/90">{skill}</p>
